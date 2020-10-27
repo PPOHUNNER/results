@@ -38,6 +38,6 @@ app.get("*",(req,res)=>{
     res.send("<h1>Wrong request</h1>");
 })
 
-app.listen(3000 || process.env.PORT,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log("Server started at port 3000")
 });
