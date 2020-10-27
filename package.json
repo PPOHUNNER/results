@@ -4,7 +4,8 @@
   "description": "Demo result website for RPA project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Group B6",
   "license": "ISC",
