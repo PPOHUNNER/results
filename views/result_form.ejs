@@ -28,28 +28,36 @@
             <button>Submit</button>
         </form>
         <% if(data!=null){ %> 
-        <table>
-            <tr>
-              <th>Name</th>
-              <th>Roll no</th>
-              <th>email</th>
-              <th>maths</th>
-              <th>science</th>
-              <th>Social Science</th>
-              <th>secondLanguage</th>
-              <th>firstLanguage</th>
-            </tr>
-            <tr>
-              <td><%=data.name%></td>
-              <td><%=data.rollNo%></td>
-              <td><%=data.email%></td>
-              <td><%=data.maths%></td>
-              <td><%=data.science%></td>
-              <td><%=data.socialScience%></td>
-              <td><%=data.secondLanguage%></td>
-              <td><%=data.firstLanguage %></td>
-            </tr>
-          </table>
+            <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Roll no</th>
+                  <th>email</th>
+                  <th>DAA</th>
+                  <th>DBMS</th>
+                  <th>FMC</th>
+                  <th>MP</th>
+                  <th>ATFL</th>
+                  <th>OS</th>
+                  <th>DAA LAB</th>
+                  <th>DBMS LAAB</th>
+                  <th>ಕನ್ನಡ</th>
+                </tr>
+                <tr>
+                  <td><%=data.name%></td>
+                  <td><%=data.rollNo%></td>
+                  <td><%=data.email%></td>
+                  <td><%=data.daa%></td>
+                  <td><%=data.dbms%></td>
+                  <td><%=data.fmc%></td>
+                  <td><%=data.mp%></td>
+                  <td><%=data.atfl %></td>
+                  <td><%=data.os%> </td>
+                  <td><%=data.daaLab%> </td>
+                  <td><%=data.dbmsLab%> </td>
+                  <td><%=data.kannada%> </td>
+                </tr>
+              </table>
         <% }  %> 
           
         
