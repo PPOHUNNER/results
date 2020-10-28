@@ -3,7 +3,6 @@ const mongoose=require("mongoose");
 const resultSchema = mongoose.Schema({
     name:String,
     rollNo:String,
-    email:String,
     daa:Number,
     dbms:Number,
     fmc:Number,
@@ -12,7 +11,8 @@ const resultSchema = mongoose.Schema({
     os:Number,
     daaLab:Number,
     dbmsLab:Number,
-    kannada:Number
+    kannada:Number,
+    sgpa:Number
 });
 
 const Result = mongoose.model("Result",resultSchema);

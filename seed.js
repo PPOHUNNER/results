@@ -8,79 +8,29 @@ mongoose.connect(uri, {useNewUrlParser: true,useUnifiedTopology: true}).then(()=
     console.log(err);
 })
 
-let student1 = new Result({
-    name:"Prajwal Ponnana",
-    rollNo:"1DS18CS093",
-    email:"ppothehunner@gmail.com",
-    daa:10,
-    dbms:9,
-    fmc:9,
-    mp:10,
-    atfl:9,
-    os:10,
-    daaLab:8,
-    dbmsLab:10,
-    kannada:9
-});
-student1.save().then((data)=>{
-    console.log(data);
-}).catch((err)=>{
-    console.log(err);
-});
-student1 = new Result({
-    name:"Nithin AG",
-    rollNo:"1DS18CS081",
-    email:"nithinag10@gmail.com",
-    daa:10,
-    dbms:9,
-    fmc:9,
-    mp:10,
-    atfl:9,
-    os:10,
-    daaLab:8,
-    dbmsLab:10,
-    kannada:9
-});
-student1.save().then((data)=>{
-    console.log(data);
-}).catch((err)=>{
-    console.log(err);
-});
- student1 = new Result({
-    name:"Manoj Sagar",
-    rollNo:"1DS18CS066",
-    email:"manojsagar066@gmail.com",
-    daa:10,
-    dbms:9,
-    fmc:9,
-    mp:10,
-    atfl:9,
-    os:10,
-    daaLab:8,
-    dbmsLab:10,
-    kannada:9
-});
-student1.save().then((data)=>{
-    console.log(data);
-}).catch((err)=>{
-    console.log(err);
-});
-student1 = new Result({
-    name:"Krutharth MR",
-    rollNo:"1DS18CS169",
-    email:"krutarthrajalbandi@gmail.com",
-    daa:10,
-    dbms:9,
-    fmc:9,
-    mp:10,
-    atfl:9,
-    os:10,
-    daaLab:8,
-    dbmsLab:10,
-    kannada:9
-});
-student1.save().then((data)=>{
-    console.log(data);
-}).catch((err)=>{
-    console.log(err);
-});
+let student1;
+let usn;
+let usns = [93,81,66]
+let names = ["Prajwal Ponnana","Nithin AG","Manoj BB","Krutarth MR"];
+for(let i = 0;i<=3;i++){
+    usn = "1DS18CS" + `${usns[i]};`
+    student1 = new Result({
+        name:names[i],
+        rollNo:usn,
+        daa:10,
+        dbms:9,
+        fmc:9,
+        mp:10,
+        atfl:9,
+        os:10,
+        daaLab:8,
+        dbmsLab:10,
+        kannada:9,
+        sgpa:9.3
+    });
+    student1.save().then((data)=>{
+        console.log(data);
+    }).catch((err)=>{
+        console.log(err);
+    });
+}
