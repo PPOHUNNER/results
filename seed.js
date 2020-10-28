@@ -10,14 +10,13 @@ mongoose.connect(uri, {useNewUrlParser: true,useUnifiedTopology: true}).then(()=
 }).catch((err)=>{
     console.log(err);
 })
-
+var humanNames = require('indian-name-generator');
 let student1;
 let usn;
-let names = ["Pravin Tambe","Rohith Singh","Himesh Raghav","Nikhil Saheb","Ravi Kishan","Aakash Kumar","Ankit Tiwary","Ramesh Powar","Navin Kumar","Harish Kumar"];
-for(let i = 0;i<=9;i++){
-    usn = "1DS18CS00" + `${i}`
+for(let i = 11;i<=20;i++){
+    usn = "1DS18CS0" + `${i}`
     student1 = new Result({
-        name:names[i],
+        name:humanNames.randomMarathi() +" " + humanNames.maleMarathi(),
         rollNo:usn,
         sgpa:getRndInteger(7,10),
         daa:getRndInteger(7,10),
@@ -36,5 +35,3 @@ for(let i = 0;i<=9;i++){
         console.log(err);
     });
 }
-
-console.log(getRndInteger(7,10))
